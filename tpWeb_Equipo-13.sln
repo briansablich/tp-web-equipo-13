@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCatalogo", "WebCatalogo\WebCatalogo.csproj", "{B24E7355-8F92-4A47-943F-ECE7AE64BB60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{6ADA49C5-CE34-4CB5-9207-7D211A99835E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{017829C0-B677-496F-83CD-F4D9A30560CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B24E7355-8F92-4A47-943F-ECE7AE64BB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24E7355-8F92-4A47-943F-ECE7AE64BB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24E7355-8F92-4A47-943F-ECE7AE64BB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24E7355-8F92-4A47-943F-ECE7AE64BB60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ADA49C5-CE34-4CB5-9207-7D211A99835E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ADA49C5-CE34-4CB5-9207-7D211A99835E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ADA49C5-CE34-4CB5-9207-7D211A99835E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ADA49C5-CE34-4CB5-9207-7D211A99835E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{017829C0-B677-496F-83CD-F4D9A30560CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017829C0-B677-496F-83CD-F4D9A30560CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017829C0-B677-496F-83CD-F4D9A30560CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017829C0-B677-496F-83CD-F4D9A30560CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB903F73-5543-4A20-92E3-FEA1ED437792}
+	EndGlobalSection
+EndGlobal

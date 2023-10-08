@@ -1,0 +1,9 @@
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Negocio\bin\Debug\Negocio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Negocio\bin\Debug\Negocio.pdb
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Negocio\bin\Debug\Dominio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Negocio\bin\Debug\Dominio.pdb
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Negocio\obj\Debug\Negocio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Negocio\obj\Debug\Negocio.pdb

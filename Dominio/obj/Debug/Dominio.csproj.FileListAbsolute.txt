@@ -1,0 +1,6 @@
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Dominio\bin\Debug\Dominio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Dominio\bin\Debug\Dominio.pdb
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Dominio\obj\Debug\Dominio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tp-winform-equipo-13\TPWinForm_Equipo13\Dominio\obj\Debug\Dominio.pdb
