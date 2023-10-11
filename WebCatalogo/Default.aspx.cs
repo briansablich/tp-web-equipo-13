@@ -24,5 +24,12 @@ namespace WebCatalogo
                 repArticulosCards.DataBind();                                   // enlazamos los datos de la lista
             }
         }
+
+        protected void btnDetalle_Click(object sender, EventArgs e)
+        {
+            string valorID = ((Button)sender).CommandArgument;
+
+            Response.Redirect("detalleArticulo.aspx?id=" + valorID, false);
+        }
     }
 }
