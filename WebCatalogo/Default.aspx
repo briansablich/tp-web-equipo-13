@@ -15,7 +15,9 @@
                         <img src="" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><%#Eval("NombreArt")%></h5>
+                            <p class="card-text"><%#Eval("MarcaArt.NombreMarca")%></p>
                             <p class="card-text"><%#Eval("DescripcionArt")%></p>
+                            <p class="card-text"><%#Eval("PrecioArt")%></p>
                             <asp:Button ID="btnAgregar" CssClass="btn btn-primary" runat="server" Text="Agregar" />
                             <asp:Button ID="btnDetalle" CssClass="btn btn-primary" runat="server" Text="Detalle" CommandArgument='<%#Eval("ID")%>' CommandName="idArticulo" OnClick="btnDetalle_Click" />
                         </div>
