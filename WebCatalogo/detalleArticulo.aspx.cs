@@ -22,7 +22,7 @@ namespace WebCatalogo
             ImagenNegocio imagenNegocio = new ImagenNegocio();
             ListaImagenes = imagenNegocio.ObtenerDatos();
 
-            idArticuloUrl = Convert.ToInt32(Request.QueryString["id"]);         // capturamos el id del art a mostrar detalle
+            idArticuloUrl = int.Parse(Request.QueryString["id"]);         // capturamos el id del art a mostrar detalle
 
 
             //DESARROLLO PARA AGRUPAR LAS IMG DEL ARTICULO...
@@ -30,7 +30,6 @@ namespace WebCatalogo
 
             repCarouselImagenes.DataSource = ImgsDelArticulo;
             repCarouselImagenes.DataBind();
-
         }
     }
 }

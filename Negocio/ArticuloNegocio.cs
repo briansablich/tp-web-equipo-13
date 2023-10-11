@@ -24,7 +24,7 @@ namespace Negocio
             try
             {
 
-                datosArt.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS Marca, A.IdCategoria, C.Descripcion AS Categoria, A.Precio FROM ARTICULOS AS A LEFT JOIN MARCAS AS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id");
+                datosArt.SetearConsulta("SELECT DISTINCT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS Marca,A.IdCategoria, C.Descripcion AS Categoria, (SELECT TOP 1 I.Id FROM IMAGENES AS I WHERE I.IdArticulo = A.Id) AS IdImg,(SELECT TOP 1 I.ImagenUrl FROM IMAGENES AS I WHERE I.IdArticulo = A.Id) AS URL, A.Precio FROM ARTICULOS AS A LEFT JOIN MARCAS AS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES AS I ON A.Id = I.IdArticulo");
                 datosArt.AbrirConexionEjecutarConsulta();
 
                 while (datosArt.Lector.Read())
@@ -41,8 +41,18 @@ namespace Negocio
                     aux.DescripcionArt = (string)datosArt.Lector["Descripcion"] is DBNull ? "S/D" : (string)datosArt.Lector["Descripcion"];
                     //SE TOMA DECICION CON OPERADOR TERNARIO
                     aux.MarcaArt.IdMarca = (int)datosArt.Lector["IdMarca"] is DBNull ? 0 : (int)datosArt.Lector["IdMarca"];
-                    //SE TOMA DECICION CON OPERADOR TERNARIO
-                    aux.MarcaArt.NombreMarca = (string)datosArt.Lector["Marca"] is DBNull ? "S/M" : (string)datosArt.Lector["Marca"];
+                    
+                    //CHECK NULL
+                    if (!(datosArt.Lector["Marca"] is DBNull))
+                    {
+                        aux.MarcaArt.NombreMarca = (string)datosArt.Lector["Marca"];
+                    }
+                    else
+                    {
+                        //ASIGNACION POR DEFECTO
+                        aux.MarcaArt.NombreMarca = "S/M";
+                    }
+
                     //SE TOMA DECICION CON OPERADOR TERNARIO
                     aux.CategoriaArt.IdCategoria = (int)datosArt.Lector["IdCategoria"] is DBNull ? 0 : (int)datosArt.Lector["IdCategoria"];
                     
@@ -57,10 +67,13 @@ namespace Negocio
                         aux.CategoriaArt.NombreCategoria = "S/C";
                     }
 
+                    //DATOS NO NULOS
+                    aux.ImagenArt.IdArt = aux.ID;
+                    aux.ImagenArt.IdImagen = (int)datosArt.Lector["IdImg"];
+                    aux.ImagenArt.URLImagen = (string)datosArt.Lector["URL"];
+
                     //SE TOMA DECICION CON OPERADOR TERNARIO
                     aux.PrecioArt = (decimal)datosArt.Lector["Precio"] is DBNull ? 0 : (decimal)datosArt.Lector["Precio"];
-
-                    aux.ImagenArt = ObtenerImagenes(aux);
 
                     articulos.Add(aux);
                 }

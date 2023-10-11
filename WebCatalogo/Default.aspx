@@ -12,7 +12,7 @@
 
                 <div class="col">
                     <div class="card">
-                        <img src="" class="card-img-top" alt="...">
+                        <img src="<%#Eval("ImagenArt.URLImagen")%>" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><%#Eval("NombreArt")%></h5>
                             <p class="card-text"><%#Eval("MarcaArt.NombreMarca")%></p>

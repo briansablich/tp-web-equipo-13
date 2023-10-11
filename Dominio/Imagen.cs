@@ -11,6 +11,7 @@ namespace Dominio
     {
         [DisplayName("ID")]
         public int IdImagen { get; set; }
+
         [DisplayName("ID de Articulo")]
         public int IdArt { get; set; }
         [DisplayName("URL Imagen")]

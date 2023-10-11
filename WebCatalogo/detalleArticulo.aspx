@@ -14,7 +14,7 @@
                 <ItemTemplate>
 
                     <div class="carousel-item active">
-                        <img src="<% //URL DE LA IMG!!!!!!!!!!!!!!!! %>" class="d-block w-100" alt="...">
+                        <img src="<% %>" class="d-block w-100" alt="...">
                     </div>
 
                 </ItemTemplate>

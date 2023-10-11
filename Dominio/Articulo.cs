@@ -23,14 +23,14 @@ namespace Dominio
         [DisplayName("Precio")]
         public decimal PrecioArt { get; set; }
         [DisplayName("Imagen")]
-        public List<Imagen> ImagenArt { get; set; }
+        public Imagen ImagenArt { get; set; }
 
         //CTOR. CON ASIGNACIÓN DE OBJETOS A VARIABLES DE OTRAS CLASES
         public Articulo()
         {
             MarcaArt = new Marca();
             CategoriaArt = new Categoria();
-            ImagenArt = new List<Imagen>();
+            ImagenArt = new Imagen();
         }
     }
 }
