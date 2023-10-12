@@ -31,7 +31,7 @@
                         <a class="nav-link active" aria-current="page" href="Carrito.aspx">
                             <img src="https://e7.pngegg.com/pngimages/833/426/png-clipart-shopping-cart-shopping-cart.png" class="btn-close border display-6 shadow-sm" alt="Alternate Text" />
                         </a>
-                        <asp:Label ID="lblContadorCarrito" runat="server" Text="" CssClass="h3"></asp:Label>
+                        <asp:Label ID="lblContadorCarrito" runat="server" Text="" CssClass="h3" style="display: flex; align-items: center"></asp:Label>
                     </div>
                 </div>
             </div>
