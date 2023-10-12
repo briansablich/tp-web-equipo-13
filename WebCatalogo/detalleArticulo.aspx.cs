@@ -17,6 +17,8 @@ namespace WebCatalogo
 
         public List<Imagen> ImgsDelArticulo = new List<Imagen>();
 
+        public List<Articulo> Articulos = new List<Articulo>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             ImagenNegocio imagenNegocio = new ImagenNegocio();
@@ -30,6 +32,18 @@ namespace WebCatalogo
 
             repCarouselImagenes.DataSource = ImgsDelArticulo;
             repCarouselImagenes.DataBind();
+
+
+            //DESARROLLO PARA LA DESCRIPCION
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            Articulos = articuloNegocio.ObtenerDatos();
+            Articulo aux = new Articulo();
+            aux = Articulos.Find(x => x.ID == idArticuloUrl);
+
+            lblNombre.Text = aux.NombreArt.ToString();
+            lblDescripcion.Text = aux.DescripcionArt.ToString();
+            lblPrecio.Text = '$' + aux.PrecioArt.ToString();
+
         }
     }
 }

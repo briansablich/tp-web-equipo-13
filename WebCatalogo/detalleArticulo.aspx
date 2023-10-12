@@ -5,15 +5,15 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div style="max-width:600px; width:100%" >
+    <div style="max-width: 600px; width: 100%">
 
-        <div id="carouselExample" class="carousel slide" <%--style="position: center;"--%> >
+        <div id="carouselExample" class="carousel slide" <%--style="position: center;"--%>>
 
-            <div class="carousel-inner" style="min-height:600px" >
+            <div class="carousel-inner" style="min-height: 600px">
                 <asp:Repeater ID="repCarouselImagenes" runat="server">
                     <ItemTemplate>
 
-                        <div class="carousel-item active" style="min-height:600px" <%--style="width: 500px; height: 500px; overflow: hidden; object-position: center; text-align: center; justify-content: center; align-items: center;"--%>>
+                        <div class="carousel-item active" style="min-height: 600px" <%--style="width: 500px; height: 500px; overflow: hidden; object-position: center; text-align: center; justify-content: center; align-items: center;"--%>>
                             <img src="<%#Eval("URLImagen")%>" <%--style="width: 100%; height: 100%; object-fit: cover;"--%> class="d-block w-100" alt="...">
                         </div>
 
@@ -31,6 +31,16 @@
                     aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+
+            <div style="align-items:center ">
+                <asp:Label ID="lblNombre" runat="server" Text="" CssClass="h3"></asp:Label>
+                <br />
+                <asp:Label ID="lblDescripcion" runat="server" Text="" CssClass="h4"></asp:Label>
+                <br />
+                <asp:Label ID="lblPrecio" runat="server" Text="" CssClass="display-5"></asp:Label>
+            </div>
+
+
         </div>
 
     </div>
