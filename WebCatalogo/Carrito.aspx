@@ -17,7 +17,7 @@
             </tr>
         </thead>
 
-        <asp:Repeater ID="repCarrito" runat="server">
+        <asp:Repeater ID="repCarrito" runat="server" OnItemCommand="repCarrito_ItemCommand">
             <ItemTemplate>
                 <tbody>
                     <tr>
@@ -30,8 +30,8 @@
                         <td class="col-1"><%#Eval("PrecioArt")%></td>
                         <td class="col-1 text-center">1 </td>
                         <td class="col-2 text-center">
-                            <asp:Button ID="btnEliminar" CssClass="btn btn-outline-danger" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" CommandArgument='<%#Eval("ID") %>'/>
-                            <asp:Button ID="btnVerDetalle" CssClass="btn btn-outline-primary" runat="server" Text="Detalles" />
+                            <asp:LinkButton ID="btnEliminar" CssClass="btn btn-outline-danger" runat="server"  Text="Eliminar" CommandName="Eliminar" CommandArgument='<%#Eval("ID") %>' />
+                            <asp:Button ID="btnVerDetalle" CssClass="btn btn-outline-primary" runat="server" Text="Detalles"  CommandName="VerDetalle" CommandArgument='<%#Eval("ID") %>' />
                         </td>
                     </tr>
                 </tbody>

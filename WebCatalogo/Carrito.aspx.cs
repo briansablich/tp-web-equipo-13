@@ -52,23 +52,24 @@ namespace WebCatalogo
             
         }
 
-        protected void btnEliminar_Click(object sender, EventArgs e)
+        protected void repCarrito_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            Button btnEliminar = (Button)sender;
-            int idArticulo = int.Parse(btnEliminar.CommandArgument);
-
-            List<Articulo> copiaCarro = new List<Articulo>(AgregadosAlCarro);
-
-            Articulo articuloAEliminar = copiaCarro.FirstOrDefault(a => a.ID == idArticulo);
-
-            if (articuloAEliminar != null)
+            if (e.CommandName == "Eliminar") //Pregunta si "Eliminar" disparó el Item Command
             {
-                copiaCarro.Remove(articuloAEliminar);
-            }
+                int idArticulo = Convert.ToInt32(e.CommandArgument);
+                List<Articulo> copiaCarro = new List<Articulo>(AgregadosAlCarro); //Se crea y carga la lista auxiliar
 
-            Session["carroSession"] = copiaCarro;
-            repCarrito.DataSource = copiaCarro;
-            repCarrito.DataBind();
+                Articulo articuloAEliminar = copiaCarro.FirstOrDefault(a => a.ID == idArticulo); //Busca el articulo en la lista
+
+                if (articuloAEliminar != null)
+                {
+                    copiaCarro.Remove(articuloAEliminar); //Elimina el articulo de la copia
+                }
+
+                Session["carroSession"] = copiaCarro;   //Vuelve a cargar el carro
+                repCarrito.DataSource = copiaCarro;
+                repCarrito.DataBind();
+            }
         }
     }
 }
