@@ -14,6 +14,10 @@ namespace WebCatalogo
 
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
+
+        protected void lblContadorCarrito_PreRender(object sender, EventArgs e)
+        {
             if ((List<Articulo>)Session["carroSession"] != null)
             {
                 AgregadosAlCarro = (List<Articulo>)Session["carroSession"];
