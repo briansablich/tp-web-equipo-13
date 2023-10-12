@@ -18,7 +18,7 @@
                             <p class="card-text"><%#Eval("MarcaArt.NombreMarca")%></p>
                             <p class="card-text"><%#Eval("DescripcionArt")%></p>
                             <p class="card-text"><%#Eval("PrecioArt")%></p>
-                            <asp:Button ID="btnAgregar" CssClass="btn btn-primary" runat="server" Text="Agregar" />
+                            <asp:Button ID="btnAgregar" CssClass="btn btn-primary" runat="server" Text="Agregar" CommandArgument='<%#Eval("ID") %>' CommandName="idArticulo" OnClick="btnAgregar_Click"/>
                             <asp:Button ID="btnDetalle" CssClass="btn btn-primary" runat="server" Text="Detalle" CommandArgument='<%#Eval("ID")%>' CommandName="idArticulo" OnClick="btnDetalle_Click" />
                         </div>
                     </div>

@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <table class="table position-relative">
         <thead>
             <tr>
@@ -15,11 +16,9 @@
                 <th scope="col" class="col-2 text-lg-center">Acción</th>
             </tr>
         </thead>
-    </table>
 
-    <asp:Repeater ID="repCarrito" runat="server">
-        <ItemTemplate>
-            <table class="table position-relative">
+        <asp:Repeater ID="repCarrito" runat="server">
+            <ItemTemplate>
                 <tbody>
                     <tr>
                         <th scope="row" class="col-1">
@@ -36,8 +35,9 @@
                         </td>
                     </tr>
                 </tbody>
-            </table>
-        </ItemTemplate>
-    </asp:Repeater>
+            </ItemTemplate>
+        </asp:Repeater>
+
+    </table>
 
 </asp:Content>

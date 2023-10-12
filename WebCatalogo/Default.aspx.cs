@@ -12,7 +12,6 @@ namespace WebCatalogo
     public partial class Default : System.Web.UI.Page
     {
         public List<Articulo> ListaArticulos {  get; set; }                     // la clase tiene un atributo lista de articulos
-
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();            // creamos objeto negocio en la carga
@@ -30,6 +29,13 @@ namespace WebCatalogo
             string valorID = ((Button)sender).CommandArgument;
 
             Response.Redirect("detalleArticulo.aspx?id=" + valorID, false);
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            int valorID = int.Parse(((Button)sender).CommandArgument);
+
+            Session.Add("ID" + valorID, valorID);
         }
     }
 }
