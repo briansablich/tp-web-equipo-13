@@ -33,9 +33,36 @@ namespace WebCatalogo
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            int valorID = int.Parse(((Button)sender).CommandArgument);
+            int valorID = int.Parse(((Button)sender).CommandArgument);       
 
-            Session.Add("ID" + valorID, valorID);
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            List<Articulo> ListaArticulos = articuloNegocio.ObtenerDatos();
+            Articulo Aux = new Articulo();
+
+            foreach (Articulo X in ListaArticulos)
+            {
+
+                if (valorID != 0)
+                {
+                    Aux = ListaArticulos.Find(E => E.ID == valorID);
+                }
+                 
+             }
+                 if (Session["carroSession"] != null)
+                 {
+                     List<Articulo> auxCarro = new List<Articulo>();
+                     auxCarro = (List<Articulo>)Session["carroSession"];
+                     auxCarro.Add(Aux);
+                     Session["carroSession"]= auxCarro;
+                 }
+                 else
+                 {
+                     List<Articulo> auxCarro = new List<Articulo>();
+                     auxCarro.Add(Aux);
+                     Session["carroSession"] = auxCarro;
+                 }
         }
+
+        
     }
 }
