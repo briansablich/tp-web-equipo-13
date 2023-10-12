@@ -14,6 +14,7 @@ namespace WebCatalogo
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
 
         protected void lblContadorCarrito_PreRender(object sender, EventArgs e)
@@ -28,6 +29,27 @@ namespace WebCatalogo
                 lblContadorCarrito.Text = "0";
             }
 
+        }
+
+        protected void lblTotal_PreRender(object sender, EventArgs e)
+        {
+            decimal total = 0;
+
+            if ((List<Articulo>)Session["carroSession"] != null)
+            {
+                AgregadosAlCarro = (List<Articulo>)Session["carroSession"];
+
+                foreach (Articulo art in AgregadosAlCarro)
+                {
+                    total += art.PrecioArt;
+                }
+
+                lblTotal.Text = "$" + total.ToString();
+            }
+            else
+            {
+                lblTotal.Text = "$0";
+            }
         }
     }
 }
