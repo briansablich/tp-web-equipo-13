@@ -10,8 +10,9 @@
                 <th scope="col" class="col-2">Nombre</th>
                 <th scope="col" class="col-1">Marca</th>
                 <th scope="col" class="col-3">Descripción</th>
-                <th scope="col" class="col-2">Precio</th>
-                <th scope="col" class="col-2">Cantidad</th>
+                <th scope="col" class="col-1">Precio</th>
+                <th scope="col" class="col-1 text-center">Cantidad</th>
+                <th scope="col" class="col-2 text-lg-center">Acción</th>
             </tr>
         </thead>
     </table>
@@ -27,8 +28,12 @@
                         <td class="col-2"><%#Eval("NombreArt")%> </td>
                         <td class="col-1"><%#Eval("MarcaArt.NombreMarca")%></td>
                         <td class="col-3"><%#Eval("DescripcionArt")%></td>
-                        <td class="col-2"><%#Eval("PrecioArt")%></td>
-                        <td class="col-2">1 </td>
+                        <td class="col-1"><%#Eval("PrecioArt")%></td>
+                        <td class="col-1 text-center">1 </td>
+                        <td class="col-2 text-center">
+                            <asp:Button ID="btnEliminar" CssClass="btn btn-outline-danger" runat="server" Text="Eliminar" />
+                            <asp:Button ID="btnVerDetalle" CssClass="btn btn-outline-primary" runat="server" Text="Detalles" />
+                        </td>
                     </tr>
                 </tbody>
             </table>
