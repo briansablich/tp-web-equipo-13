@@ -44,7 +44,7 @@ namespace WebCatalogo
 
             if (e.CommandName == "VerDetalle")
             {
-                int valorID = Convert.ToInt32(e.CommandArgument);
+                string valorID = (string)e.CommandArgument;
 
                 Response.Redirect("detalleArticulo.aspx?id=" + valorID, false);
             }

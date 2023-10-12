@@ -16,3 +16,12 @@ C:\Users\july_\OneDrive\Escritorio\tp-web-equipo-13\Negocio\obj\Debug\Negocio.cs
 C:\Users\july_\OneDrive\Escritorio\tp-web-equipo-13\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\july_\OneDrive\Escritorio\tp-web-equipo-13\Negocio\obj\Debug\Negocio.dll
 C:\Users\july_\OneDrive\Escritorio\tp-web-equipo-13\Negocio\obj\Debug\Negocio.pdb
+C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\bin\Debug\Negocio.dll
+C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\bin\Debug\Negocio.pdb
+C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\bin\Debug\Dominio.dll
+C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\bin\Debug\Dominio.pdb
+C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\obj\Debug\Negocio.dll
+C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\obj\Debug\Negocio.pdb
