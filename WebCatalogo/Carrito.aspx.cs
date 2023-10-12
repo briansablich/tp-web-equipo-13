@@ -16,40 +16,10 @@ namespace WebCatalogo
         private List<Articulo> AgregadosAlCarro;
         protected void Page_Load(object sender, EventArgs e)
         {
+            AgregadosAlCarro = (List<Articulo>)Session["carroSession"];
 
-            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-            List<Articulo> ListaArticulos = articuloNegocio.ObtenerDatos();
-
-
-            if (!IsPostBack)
-            {
-                AgregadosAlCarro = new List<Articulo>();
-   
-                foreach (Articulo X in ListaArticulos)
-                {
-                    Articulo Aux = new Articulo();
-
-                    if (Session["ID" + X.ID] != null)
-                    {
-                        Aux = ListaArticulos.Find(E => E.ID == int.Parse(Session["ID" + X.ID].ToString()));
-
-                        AgregadosAlCarro.Add(Aux);
-                    }
-                }
-            }
-                if(Session["carroSession"] == null)
-                {
-                    AgregadosAlCarro = new List<Articulo>();
-                }
-            else
-            {
-                AgregadosAlCarro = (List<Articulo>)Session["carroSession"];
-
-            }
-                
-                repCarrito.DataSource = Session["carroSession"];
-                repCarrito.DataBind();
-            
+            repCarrito.DataSource = AgregadosAlCarro;
+            repCarrito.DataBind();
         }
 
         protected void repCarrito_ItemCommand(object source, RepeaterCommandEventArgs e)
@@ -67,8 +37,16 @@ namespace WebCatalogo
                 }
 
                 Session["carroSession"] = copiaCarro;   //Vuelve a cargar el carro
+                
                 repCarrito.DataSource = copiaCarro;
                 repCarrito.DataBind();
+            }
+
+            if (e.CommandName == "VerDetalle")
+            {
+                int valorID = Convert.ToInt32(e.CommandArgument);
+
+                Response.Redirect("detalleArticulo.aspx?id=" + valorID, false);
             }
         }
     }

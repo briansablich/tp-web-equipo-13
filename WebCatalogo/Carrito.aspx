@@ -31,7 +31,7 @@
                         <td class="col-1 text-center">1 </td>
                         <td class="col-2 text-center">
                             <asp:LinkButton ID="btnEliminar" CssClass="btn btn-outline-danger" runat="server"  Text="Eliminar" CommandName="Eliminar" CommandArgument='<%#Eval("ID") %>' />
-                            <asp:Button ID="btnVerDetalle" CssClass="btn btn-outline-primary" runat="server" Text="Detalles"  CommandName="VerDetalle" CommandArgument='<%#Eval("ID") %>' />
+                            <asp:LinkButton ID="btnVerDetalle" CssClass="btn btn-outline-primary" runat="server" Text="Detalles"  CommandName="VerDetalle" CommandArgument='<%#Eval("ID") %>' />
                         </td>
                     </tr>
                 </tbody>

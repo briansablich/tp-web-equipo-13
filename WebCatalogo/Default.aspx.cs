@@ -11,7 +11,7 @@ namespace WebCatalogo
 {
     public partial class Default : System.Web.UI.Page
     {
-        public List<Articulo> ListaArticulos {  get; set; }                     // la clase tiene un atributo lista de articulos
+        public List<Articulo> ListaArticulos { get; set; }                     // la clase tiene un atributo lista de articulos
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();            // creamos objeto negocio en la carga
@@ -33,11 +33,11 @@ namespace WebCatalogo
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            int valorID = int.Parse(((Button)sender).CommandArgument);       
-
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-            List<Articulo> ListaArticulos = articuloNegocio.ObtenerDatos();
             Articulo Aux = new Articulo();
+            
+            int valorID = int.Parse(((Button)sender).CommandArgument);
+            List<Articulo> ListaArticulos = articuloNegocio.ObtenerDatos();
 
             foreach (Articulo X in ListaArticulos)
             {
@@ -46,23 +46,21 @@ namespace WebCatalogo
                 {
                     Aux = ListaArticulos.Find(E => E.ID == valorID);
                 }
-                 
-             }
-                 if (Session["carroSession"] != null)
-                 {
-                     List<Articulo> auxCarro = new List<Articulo>();
-                     auxCarro = (List<Articulo>)Session["carroSession"];
-                     auxCarro.Add(Aux);
-                     Session["carroSession"]= auxCarro;
-                 }
-                 else
-                 {
-                     List<Articulo> auxCarro = new List<Articulo>();
-                     auxCarro.Add(Aux);
-                     Session["carroSession"] = auxCarro;
-                 }
-        }
 
-        
+            }
+
+            if (Session["carroSession"] != null)
+            {
+                List<Articulo> auxCarro = (List<Articulo>)Session["carroSession"];
+
+                auxCarro.Add(Aux);
+            }
+            else
+            {
+                List<Articulo> auxCarro = new List<Articulo>();
+                auxCarro.Add(Aux);
+                Session["carroSession"] = auxCarro;
+            }
+        }
     }
 }
