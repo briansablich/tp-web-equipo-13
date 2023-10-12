@@ -32,7 +32,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
 
-            <div style="align-items:center ">
+            <div style="text-align:center">
                 <asp:Label ID="lblNombre" runat="server" Text="" CssClass="h3"></asp:Label>
                 <br />
                 <asp:Label ID="lblDescripcion" runat="server" Text="" CssClass="h4"></asp:Label>
