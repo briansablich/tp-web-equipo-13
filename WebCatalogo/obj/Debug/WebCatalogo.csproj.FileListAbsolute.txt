@@ -242,3 +242,7 @@ C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\WebCatalo
 C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\WebCatalogo\obj\Debug\WebCatalogo.csproj.CopyComplete
 C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\WebCatalogo\obj\Debug\WebCatalogo.dll
 C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\WebCatalogo\obj\Debug\WebCatalogo.pdb
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\WebCatalogo\bin\Dominio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\WebCatalogo\bin\Negocio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\WebCatalogo\bin\Dominio.pdb
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\WebCatalogo\bin\Negocio.pdb
