@@ -17,7 +17,7 @@
                             <h5 class="card-title"><%#Eval("NombreArt")%></h5>
                             <p class="card-text"><%#Eval("MarcaArt.NombreMarca")%></p>
                             <p class="card-text"><%#Eval("DescripcionArt")%></p>
-                            <p class="card-text"><%#Eval("PrecioArt")%></p>
+                            <p class="card-text">$ <%#Eval("PrecioArt","{0:F2}")%></p>
                             <asp:Button ID="btnAgregar" CssClass="btn btn-primary" runat="server" Text="Agregar" CommandArgument='<%#Eval("ID") %>' CommandName="idArticulo" OnClick="btnAgregar_Click"/>
                             <asp:Button ID="btnDetalle" CssClass="btn btn-secondary" runat="server" Text="Detalle" CommandArgument='<%#Eval("ID")%>' CommandName="idArticulo" OnClick="btnDetalle_Click" />
                         </div>

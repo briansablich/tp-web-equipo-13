@@ -50,7 +50,7 @@ namespace WebCatalogo
 
             lblNombre.Text = aux.NombreArt.ToString();
             lblDescripcion.Text = aux.DescripcionArt.ToString();
-            lblPrecio.Text = '$' + aux.PrecioArt.ToString();
+            lblPrecio.Text = '$' + aux.PrecioArt.ToString("N2");
 
         }
 

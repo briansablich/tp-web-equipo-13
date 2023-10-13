@@ -70,14 +70,14 @@ namespace WebCatalogo
 
             TableCell celda = new TableCell(); // crea una celda
 
-            celda.ColumnSpan = 7;
+            celda.ColumnSpan = 6;
             celda.HorizontalAlign = HorizontalAlign.Center;
-            celda.Text = "Cantidad articulos: " + AgregadosAlCarro.Count() + "\t" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Importe total: $" + total.ToString("N2");
+            celda.Font.Bold = true;
+            celda.Text = "Cantidad articulos: " + AgregadosAlCarro.Count() + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Importe total: $" + total.ToString("N2");
             
-            filaNueva.Cells.Add(celda);
+            filaNueva.Cells.Add(celda); //agrega la celda a la fila nueva
 
-            repCarrito.Controls[AgregadosAlCarro.Count - 1].Controls.Add(filaNueva);
-            celda.CssClass = "Col 1";
+            repCarrito.Controls[AgregadosAlCarro.Count - 1].Controls.Add(filaNueva); //agrega la fila en el indice ultimo del repeater
 
         }
 
