@@ -49,7 +49,34 @@ namespace WebCatalogo
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            //CARGAR ARTICULO AL CARRITO, TERMINAR
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            Articulo Aux = new Articulo();
+
+            List<Articulo> ListaArticulos = articuloNegocio.ObtenerDatos();
+            int valorID = idArticuloUrl;
+
+            foreach (Articulo X in ListaArticulos)
+            {
+
+                if (valorID != 0)
+                {
+                    Aux = ListaArticulos.Find(E => E.ID == valorID);
+                }
+            }
+
+            if (Session["carroSession"] != null)
+            {
+                List<Articulo> auxCarro = (List<Articulo>)Session["carroSession"];
+                auxCarro.Add(Aux);
+            }
+            else
+            {
+                List<Articulo> auxCarro = new List<Articulo>();
+                auxCarro.Add(Aux);
+                Session["carroSession"] = auxCarro;
+            }
+
+            Response.Redirect("Default.aspx");
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)
