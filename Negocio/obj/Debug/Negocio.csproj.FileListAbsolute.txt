@@ -25,3 +25,12 @@ C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\o
 C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\obj\Debug\Negocio.dll
 C:\Desarrollo\UTN\TUP\Programacion 3\TP 4 carrito asp\tp-web-equipo-13\Negocio\obj\Debug\Negocio.pdb
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\Negocio\bin\Debug\Negocio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\Negocio\bin\Debug\Negocio.pdb
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\Negocio\bin\Debug\Dominio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\Negocio\bin\Debug\Dominio.pdb
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\Negocio\obj\Debug\Negocio.dll
+C:\Users\petet\OneDrive\Documents\GitHub\tpWeb_Equipo-13\tp-web-equipo-13\Negocio\obj\Debug\Negocio.pdb
