@@ -87,7 +87,7 @@ namespace WebCatalogo
                 Session["carroSession"] = auxCarro;
             }
 
-            Response.Redirect("Default.aspx");
+            //Response.Redirect("Default.aspx");
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)
