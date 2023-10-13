@@ -25,7 +25,15 @@ namespace WebCatalogo
             ImagenNegocio imagenNegocio = new ImagenNegocio();
             ListaImagenes = imagenNegocio.ObtenerDatos();
 
+            if(Request.QueryString["id"] != null)   //Valida que haya un ID, sino sale del load
+            {
             idArticuloUrl = int.Parse(Request.QueryString["id"]);         // capturamos el id del art a mostrar detalle
+            }
+            else
+            {
+                return;
+            }
+
 
 
             //DESARROLLO PARA AGRUPAR LAS IMG DEL ARTICULO...
