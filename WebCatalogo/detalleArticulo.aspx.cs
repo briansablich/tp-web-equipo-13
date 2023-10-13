@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Negocio;
 using Dominio;
+using System.Web.Configuration;
 
 namespace WebCatalogo
 {
@@ -44,6 +45,16 @@ namespace WebCatalogo
             lblDescripcion.Text = aux.DescripcionArt.ToString();
             lblPrecio.Text = '$' + aux.PrecioArt.ToString();
 
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            //CARGAR ARTICULO AL CARRITO, TERMINAR
+        }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
         }
     }
 }

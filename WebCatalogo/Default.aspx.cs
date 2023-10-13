@@ -35,7 +35,7 @@ namespace WebCatalogo
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             Articulo Aux = new Articulo();
-            
+           
             int valorID = int.Parse(((Button)sender).CommandArgument);
             List<Articulo> ListaArticulos = articuloNegocio.ObtenerDatos();
 

@@ -10,6 +10,7 @@
         <div id="carouselExample" class="carousel slide" <%--style="position: center;"--%>>
 
             <div class="carousel-inner" style="min-height: 600px">
+
                 <asp:Repeater ID="repCarouselImagenes" runat="server">
                     <ItemTemplate>
 
@@ -19,6 +20,7 @@
 
                     </ItemTemplate>
                 </asp:Repeater>
+
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -32,14 +34,17 @@
                 <span class="visually-hidden">Next</span>
             </button>
 
-            <div style="text-align:center">
+            <div style="text-align: center">
                 <asp:Label ID="lblNombre" runat="server" Text="" CssClass="h3"></asp:Label>
                 <br />
                 <asp:Label ID="lblDescripcion" runat="server" Text="" CssClass="h4"></asp:Label>
                 <br />
                 <asp:Label ID="lblPrecio" runat="server" Text="" CssClass="display-5"></asp:Label>
+                <div style="text-align: center">
+                    <asp:Button ID="btnAgregar" CssClass="btn btn-primary" runat="server" Text="Agregar" CommandArgument='<%#Eval("ID") %>' CommandName="idArticulo" OnClick="btnAgregar_Click" />
+                    <asp:Button ID="btnVolver" CssClass="btn btn-secondary" runat="server" Text="Volver" OnClick="btnVolver_Click" />
+                </div>
             </div>
-
 
         </div>
 
