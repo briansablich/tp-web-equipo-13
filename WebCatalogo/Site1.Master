@@ -30,9 +30,9 @@
                         </a>
                         <a class="nav-link active" aria-current="page" href="Carrito.aspx">
                             <img src="https://e7.pngegg.com/pngimages/833/426/png-clipart-shopping-cart-shopping-cart.png" class="btn-close border display-6 shadow-sm" alt="Alternate Text" />
+                            <asp:Label ID="lblContadorCarrito" OnPreRender="lblContadorCarrito_PreRender" runat="server" Text="" CssClass="h3 fs-6 align-top"></asp:Label>
                         </a>
                         <div style="display: flex; align-items: center; gap: 50px">
-                            <asp:Label ID="lblContadorCarrito" OnPreRender="lblContadorCarrito_PreRender" runat="server" Text="" CssClass="h3" ></asp:Label>
                             <asp:Label ID="lblTotal" OnPreRender="lblTotal_PreRender" runat="server" Text="" CssClass="display-6"></asp:Label>
                         </div>
                     </div>

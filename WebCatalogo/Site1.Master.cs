@@ -44,7 +44,7 @@ namespace WebCatalogo
                     total += art.PrecioArt;
                 }
 
-                lblTotal.Text = "$" + total.ToString();
+                lblTotal.Text = "$" + total.ToString("N2");
             }
             else
             {

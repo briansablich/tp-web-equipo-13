@@ -46,14 +46,12 @@ namespace WebCatalogo
                 {
                     Aux = ListaArticulos.Find(E => E.ID == valorID);
                 }
-
             }
 
             if (Session["carroSession"] != null)
             {
                 List<Articulo> auxCarro = (List<Articulo>)Session["carroSession"];
                 auxCarro.Add(Aux);
-
             }
             else
             {
