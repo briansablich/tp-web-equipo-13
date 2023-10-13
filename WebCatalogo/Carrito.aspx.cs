@@ -20,6 +20,8 @@ namespace WebCatalogo
 
             repCarrito.DataSource = AgregadosAlCarro;
             repCarrito.DataBind();
+            calcularTotales();
+            
         }
 
         protected void repCarrito_ItemCommand(object source, RepeaterCommandEventArgs e)
@@ -37,9 +39,10 @@ namespace WebCatalogo
                 }
 
                 Session["carroSession"] = copiaCarro;   //Vuelve a cargar el carro
-                
-                repCarrito.DataSource = copiaCarro;
+                AgregadosAlCarro = copiaCarro;
+                repCarrito.DataSource = AgregadosAlCarro;
                 repCarrito.DataBind();
+                calcularTotales();
             }
 
             if (e.CommandName == "VerDetalle")
@@ -49,5 +52,34 @@ namespace WebCatalogo
                 Response.Redirect("detalleArticulo.aspx?id=" + valorID, false);
             }
         }
+    
+        protected void calcularTotales()
+        {
+            if(AgregadosAlCarro == null)
+            {
+                return;
+            }
+
+            decimal total = 0;
+
+            foreach (Articulo item in AgregadosAlCarro) 
+            {
+                total += item.PrecioArt; //suma el precio de todos los articulos
+            }
+            GridViewRow filaNueva = new GridViewRow(0, 0, DataControlRowType.Footer, DataControlRowState.Normal); //agrega una nueva fila de tipo footer
+
+            TableCell celda = new TableCell(); // crea una celda
+
+            celda.ColumnSpan = 7;
+            celda.HorizontalAlign = HorizontalAlign.Center;
+            celda.Text = "Cantidad articulos: " + AgregadosAlCarro.Count() + "\t" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Importe total: $" + total.ToString("N2");
+            
+            filaNueva.Cells.Add(celda);
+
+            repCarrito.Controls[AgregadosAlCarro.Count - 1].Controls.Add(filaNueva);
+            celda.CssClass = "Col 1";
+
+        }
+
     }
 }
