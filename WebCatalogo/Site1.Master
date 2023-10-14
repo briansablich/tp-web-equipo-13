@@ -42,16 +42,14 @@
             </div>
         </nav>
 
-        <div class="container">
+        <div class="container" style="display:flex; justify-content:center;">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
 
-        <footer class="card text-center mb-3">
+        <footer class="card text-center mb-3" style="padding-top:20px">
             <hr />
-
             <p>&copy; <%: DateTime.Now.Year %> - Todos los derechos reservados. Equipo 13</p>
-
             <%--<script>
                 let meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
                 let f = new Date();
