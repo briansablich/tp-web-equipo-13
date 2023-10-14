@@ -77,7 +77,11 @@ namespace WebCatalogo
             
             filaNueva.Cells.Add(celda); //agrega la celda a la fila nueva
 
+            if(repCarrito.Controls.Count > 0)
+            {
+
             repCarrito.Controls[AgregadosAlCarro.Count - 1].Controls.Add(filaNueva); //agrega la fila en el indice ultimo del repeater
+            }
 
         }
 

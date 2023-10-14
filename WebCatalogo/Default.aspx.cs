@@ -19,6 +19,7 @@ namespace WebCatalogo
 
             if (!IsPostBack)
             {
+                lblVacio.Style.Add(HtmlTextWriterStyle.Visibility, "hidden");
                 repArticulosCards.DataSource = ListaArticulos;                  // cargamos la lista en el repeater si fue la primer carga
                 repArticulosCards.DataBind();                                   // enlazamos los datos de la lista
             }
@@ -59,6 +60,43 @@ namespace WebCatalogo
                 auxCarro.Add(Aux);
                 Session["carroSession"] = auxCarro;
             }
+        }
+
+        protected void btnBuscador_Click(object sender, EventArgs e)
+        {
+            //Button Buscador = (Button)sender;
+            string filtrada = txtBuscador.Text;
+
+            if(filtrada.Length < 2 || filtrada == null)
+            {
+                txtBuscador.Text = string.Empty;
+                lblVacio.Style.Add(HtmlTextWriterStyle.Visibility, "hidden");
+                repArticulosCards.DataSource = ListaArticulos;
+                repArticulosCards.DataBind();
+                return;
+            }
+            List<Articulo> listaFiltrada = new List<Articulo>();
+            listaFiltrada.Clear();
+
+            foreach (Articulo Aux in ListaArticulos)
+            {     
+                if(Aux.MarcaArt.NombreMarca.Contains(filtrada) || Aux.DescripcionArt.Contains(filtrada) || Aux.NombreArt.Contains(filtrada))
+                {
+                    listaFiltrada.Add(Aux);
+                }
+                    
+            }
+            if (listaFiltrada.Count < 1)
+            {
+                lblVacio.Style.Add(HtmlTextWriterStyle.Visibility, "visible");
+            }
+            else
+            {
+            lblVacio.Style.Add(HtmlTextWriterStyle.Visibility, "hidden");
+            }
+            repArticulosCards.DataSource = listaFiltrada;
+            repArticulosCards.DataBind();
+
         }
     }
 }

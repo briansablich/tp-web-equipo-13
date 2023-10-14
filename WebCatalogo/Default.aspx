@@ -3,10 +3,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" CssClass="contenedor">
+ <div class="diplay:block;">
+
+    <div class="justify-content-center align-items-center mb-4 row row-cols-md-4" style="display:grid" >
+        <div class="form-inline my-2 my-lg-0" style="display:flex;">
+            <asp:TextBox ID="txtBuscador" runat="server" Style="margin-right:3%;" class=" mr-sm-2"  placeholder="Buscar..."></asp:TextBox>
+            <asp:Button ID="btnBuscador" runat="server" Text="Buscar" class="btn btn-outline-success my-2 my-sm-0" OnClick="btnBuscador_Click" CommandArgument='<%#txtBuscador.Text%>' />
+             
+        </div>
+        <div style="width:100%;" class="my-4 my-lg-4" >
+        <asp:Label ID="lblVacio" style="font-size:20px; font-weight:bold;" runat="server" Text="No hay resultados en la busqueda..."></asp:Label>
+        </div>
+    </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4 shadow">
-
         <asp:Repeater ID="repArticulosCards" runat="server">
             <ItemTemplate>
 
@@ -29,4 +40,5 @@
 
     </div>
 
+ </div>
 </asp:Content>
