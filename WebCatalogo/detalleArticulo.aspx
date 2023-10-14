@@ -5,22 +5,18 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div style="max-width: 600px; width: 100%">
+    <div style="max-width: 600px; width: 100%;">
 
         <div id="carouselExample" class="carousel slide" <%--style="position: center;"--%>>
 
             <div class="carousel-inner" style="min-height: 600px">
-
                 <asp:Repeater ID="repCarouselImagenes" runat="server">
                     <ItemTemplate>
-
-                        <div class='<%# Container.ItemIndex == 0 ? "carousel-item active" : "carousel-item" %>' style="min-height: 600px" <%--style="width: 500px; height: 500px; overflow: hidden; object-position: center; text-align: center; justify-content: center; align-items: center;"--%>>
+                        <div class="<%# Container.ItemIndex == 0 ? "carousel-item active" : "carousel-item" %>" style="min-height: 600px" >
                             <img src="<%#Eval("URLImagen")%>" <%--style="width: 100%; height: 100%; object-fit: cover;"--%> class="d-block w-100" alt="...">
                         </div>
-
                     </ItemTemplate>
                 </asp:Repeater>
-
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

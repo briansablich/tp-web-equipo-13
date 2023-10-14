@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <table class="table position-relative">
@@ -30,8 +32,8 @@
                         <td class="col-1"><%#Eval("PrecioArt","{0:F2}")%></td>
                         <!--<td class="col-1 text-center">1 </td>-->
                         <td class="col-2 text-center">
-                            <asp:LinkButton ID="btnEliminar" CssClass="btn btn-outline-danger" runat="server"  Text="Eliminar" CommandName="Eliminar" CommandArgument='<%#Eval("ID") %>' />
-                            <asp:LinkButton ID="btnVerDetalle" CssClass="btn btn-outline-primary" runat="server" Text="Detalles"  CommandName="VerDetalle" CommandArgument='<%#Eval("ID") %>' />
+                            <asp:LinkButton ID="btnEliminar" CssClass="btn btn-outline-danger" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%#Eval("ID") %>' />
+                            <asp:LinkButton ID="btnVerDetalle" CssClass="btn btn-outline-primary" runat="server" Text="Detalles" CommandName="VerDetalle" CommandArgument='<%#Eval("ID") %>' />
                         </td>
                     </tr>
                 </tbody>

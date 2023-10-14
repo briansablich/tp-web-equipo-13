@@ -47,13 +47,16 @@
             </asp:ContentPlaceHolder>
         </div>
 
-        <footer class="container-fluid form-text">
+        <footer class="card text-center mb-3">
             <hr />
-            <script>
+
+            <p>&copy; <%: DateTime.Now.Year %> - Todos los derechos reservados. Equipo 13</p>
+
+            <%--<script>
                 let meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
                 let f = new Date();
                 document.write("Copyright© Todos los derechos reservados - " + f.getDay() + " de " + meses[f.getMonth()] + " del " + f.getFullYear());
-            </script>
+            </script>--%>
         </footer>
 
     </form>
