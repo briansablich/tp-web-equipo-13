@@ -22,7 +22,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">
+                        <a class="nav-link active" aria-current="page" href="Default.aspx">
                             <img src="https://w7.pngwing.com/pngs/284/122/png-transparent-logo-house-home-building-computer-icons-house-angle-building-text.png" class="btn-close border display-6 shadow-sm" alt="Alternate Text" />
                         </a>
                         <a class="nav-link active" aria-current="page" href="Default.aspx">
