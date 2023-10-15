@@ -36,7 +36,7 @@
                 <asp:Label ID="lblDescripcion" runat="server" Text="" CssClass="h4"></asp:Label>
                 <br />
                 <asp:Label ID="lblPrecio" runat="server" Text="" CssClass="display-5"></asp:Label>
-                <div style="text-align: center">
+                <div style="text-align: center; padding:10px 10px;">
                     <asp:Button ID="btnAgregar" CssClass="btn btn-primary" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
                     <asp:Button ID="btnVolver" CssClass="btn btn-secondary" runat="server" Text="Volver" OnClick="btnVolver_Click" />
                 </div>
